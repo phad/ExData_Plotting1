@@ -7,6 +7,7 @@ if (!file.exists("../hpc.2days.csv")) {
     # Subset it for the two days of interest.
     hpc.2days <- subset(hpc,
         hpc$Date == "1/2/2007" | hpc$Date == "2/2/2007")
+
     # Write a CSV file to save time on subsequent runs.
     write.csv(hpc.2days, "../hpc.2days.csv")
 } else {
